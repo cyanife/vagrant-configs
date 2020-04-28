@@ -21,4 +21,6 @@ if [ ! -d ~/dotfiles ]; then
   ln -s ~/dotfiles/zsh/.zshrc.local ~/.zshrc.local
   touch ~/.zshrc
   echo "[ -f ~/.zshrc.local ] && source ~/.zshrc.local" >> ~/.zshrc
+  mkdir ~/share
+  chown vagrant:vagrant share/
 fi

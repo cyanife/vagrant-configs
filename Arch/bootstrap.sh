@@ -20,7 +20,10 @@ if [ ! -d ~/dotfiles ]; then
 
   ln -s ~/dotfiles/zsh/.zshrc.local ~/.zshrc.local
   touch ~/.zshrc
+  touch ~/.zlogout
   echo "[ -f ~/.zshrc.local ] && source ~/.zshrc.local" >> ~/.zshrc
+  echo 'print -P "%F{33}▓▒░ %F{160}Exiting...%f"' >> ~/.zlogout
+  echo 'print -P "%F{33}▓▒░ %F{220}type %F{82}'h' %F{220}for vagrant command help%f"' >> ~/.zlogout
   mkdir ~/share
   chown vagrant:vagrant share/
 fi

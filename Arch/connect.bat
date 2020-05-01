@@ -16,5 +16,6 @@ for /f "tokens=2* delims=," %%F IN ('vagrant status --machine-readable ^| find /
 SET STATE=%STATE:~25%
 
 IF "%STATE%"=="poweroff" (vagrant up) 
+IF "%STATE%"=="aborted" (vagrant up) 
 IF "%STATE%"=="saved" (vagrant resume)
 vagrant ssh
